@@ -14,7 +14,7 @@ class ListUser extends React.Component{
     }
     handleItemId = (item) => {
         let id = item.id;
-        this.props.history.push(`/User/${id}`)
+        this.props.history.push(`/User/:${id}`)
         // console.log(this.props);
     }
     render() {

@@ -12,11 +12,6 @@ class ListUser extends React.Component{
         listUser : res && res.data && res.data.data ? res.data.data : []
     })
     }
-    handleItemId = (item) => {
-        let id = item.id;
-        this.props.history.push(`/User/${id}`)
-        // console.log(this.props);
-    }
     render() {
         console.log(this.props);
         const {listUser} = this.state;
@@ -30,9 +25,7 @@ class ListUser extends React.Component{
                             return (
                                 <div className="item" key={index}>
                                     
-                                        <h3 className="content-heading"
-                                            onClick={() => this.handleItemId(item)}
-                                        >
+                                        <h3 className="content-heading">
                                             {item.first_name} {item.last_name}
                                         </h3>
                                         

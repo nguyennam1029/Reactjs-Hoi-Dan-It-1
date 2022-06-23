@@ -39,7 +39,7 @@ function App() {
           <Route path="/About">
             <MyComponent />
           </Route>
-          <Route path="/User" exact>
+          <Route path="/User">
             <ListUser />
           </Route>
           <Route path="/User/:id">
