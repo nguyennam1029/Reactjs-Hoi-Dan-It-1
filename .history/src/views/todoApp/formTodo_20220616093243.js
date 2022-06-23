@@ -1,0 +1,24 @@
+import React from 'react';
+class TodoForm extends React.Component {
+    state = {
+        note : [
+            {id: 'note1', title: 'HTML'},
+            {id: 'note2', title: 'CSS'},
+            {id: 'note3', title: 'Javascrip'},
+        ]
+    }
+    render() {
+        return (
+        <>
+            {
+            <div className='form'>
+                <input className = 'form-input' type='text' placeholder='Thông tin'/>
+                <botton className = 'form-btn'>Add</botton>
+            </div>
+            }
+        </>
+        )
+    }
+        
+}
+export default TodoForm;
