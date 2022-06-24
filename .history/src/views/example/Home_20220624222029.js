@@ -1,19 +1,13 @@
 import React from "react";
 import {connect} from "react-redux";
 class Home extends React.Component {
-    handleDeleteUser = (item) => {
-        console.log(item);
-        this.props.deleteUserRedux(item)
-        }
-
-        handleCreateUser = () => {
-            this.props.createUserRedux()
-        }
     render() {
         // console.log(this.props.namDev);
         let {userRedux} = this.props
         console.log(userRedux);
-        
+        handleDeleteUser = (item) => {
+
+        }
         return (
             <>
                 <h1>
@@ -31,9 +25,6 @@ class Home extends React.Component {
                             )
                         })
                     }
-                    <button type="button"
-                     onClick={() => this.handleCreateUser()}
-                     >Add New</button>
                 </div>
             </>
         )
@@ -45,9 +36,6 @@ const renderRedux = (state) => {
     }
 }
 const mapDispatchToProps = (dispatch) => {
-    return {
-    deleteUserRedux : (userDelete) => dispatch ({type: 'DELETE_USER', payload: userDelete}),
-    createUserRedux : () =>dispatch ({type: 'CREATE_USER'}),
-    }
+    deleteUserRedux : (userDelete) => dispatch ({type: 'DELETE_USER', payload: userDelete})
 }
 export default connect(renderRedux, mapDispatchToProps) (Home);

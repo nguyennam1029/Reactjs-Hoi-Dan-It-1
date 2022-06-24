@@ -7,7 +7,7 @@ class Home extends React.Component {
         }
 
         handleCreateUser = () => {
-            this.props.createUserRedux()
+            this.props.createUserRedux
         }
     render() {
         // console.log(this.props.namDev);
@@ -47,7 +47,7 @@ const renderRedux = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
     deleteUserRedux : (userDelete) => dispatch ({type: 'DELETE_USER', payload: userDelete}),
-    createUserRedux : () =>dispatch ({type: 'CREATE_USER'}),
+    createUserRedux : () =>dispatch ({type: 'CREATE_USER'})
     }
 }
 export default connect(renderRedux, mapDispatchToProps) (Home);

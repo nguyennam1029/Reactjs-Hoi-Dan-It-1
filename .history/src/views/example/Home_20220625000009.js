@@ -7,7 +7,7 @@ class Home extends React.Component {
         }
 
         handleCreateUser = () => {
-            this.props.createUserRedux()
+            this.props.createUserRedux
         }
     render() {
         // console.log(this.props.namDev);
